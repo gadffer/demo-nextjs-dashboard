@@ -31,7 +31,10 @@ export default function RootLayout({ children,}: { children: React.ReactNode;}) 
       {/* `lang="en"` 设置页面的语言为英语，这对于 SEO 和无障碍访问很重要。 */}
       {/* `body` 元素的 `className` 属性使用了模板字符串，以动态应用 `inter` 字体的类名。 */}
       {/* `antialiased` 是一个 CSS 类，用于平滑字体显示。 */}
-      <body className={`${inter.className} antialiased`}>
+      <body 
+        className={`${inter.className} antialiased`}
+        style={{ backgroundColor: '#666' }} // 设置暗灰色背景
+      >
         {/* `children` 是一个 React 特性，表示该组件包裹的子组件。 */}
         {children}
       </body>
