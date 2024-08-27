@@ -1,5 +1,5 @@
-# demo-nextjs-dashboard
+## Next.js App Router Course - Final
 
-- nextjs github example
+This is the final template for the Next.js App Router Course. It contains the final code for the dashboard application.
 
-https://github.com/vercel/next-learn/tree/main/dashboard/starter-example
+For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
