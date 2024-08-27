@@ -1,18 +1,58 @@
+/* Import the base styles of Tailwind CSS */
 @tailwind base;
+/*
+  `@tailwind base;` imports the base CSS styles of Tailwind. 
+  These styles include the browser default style resets (such as Normalize.css),
+  as well as some global utility styles (like font settings, layout, etc.).
+*/
+
+/* Import the component styles of Tailwind CSS */
 @tailwind components;
+/*
+  `@tailwind components;` imports the component styles of Tailwind. 
+  These styles are predefined classes, such as button, card, form, etc. 
+  You can use these component styles directly by class names.
+*/
+
+/* Import the utility styles of Tailwind CSS */
 @tailwind utilities;
+/*
+  `@tailwind utilities;` imports the utility class styles of Tailwind.
+  These utility class styles are some atomic style classes, such as `p-4` (padding),
+  `text-center` (text alignment), `bg-red-500` (background color), etc. 
+  They allow you to quickly combine various styles.
+*/
 
+/* Custom style: Disable the default style of number type input boxes */
 input[type='number'] {
-  -moz-appearance: textfield;
-  appearance: textfield;
+  -moz-appearance: textfield; /* For Firefox browsers, disable the default number input box style */
+  appearance: textfield; /* For other browsers, disable the default number input box style */
 }
 
+/*
+  `-moz-appearance: textfield;` is a CSS property specifically for Firefox browsers to remove the default up and down arrow buttons on number input boxes.
+  `appearance: textfield;` is a universal CSS property for disabling input box default styles to ensure a consistent appearance across different browsers.
+*/
+
+/* Style settings for Webkit browsers (such as Chrome, Safari): Remove the built-in spin button (up and down arrow buttons) of the number input box */
 input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  -webkit-appearance: none; /* Disable the built-in spin button of the number input box */
+  margin: 0; /* Remove the default padding or margin */
 }
 
+/* 
+  `::-webkit-inner-spin-button` is a pseudo-element for Webkit kernel browsers, representing the up and down arrow buttons inside the number input box.
+  By using `-webkit-appearance: none;`, we remove these buttons, making the input box look more streamlined.
+  `margin: 0;` ensures there is no unnecessary spacing after the buttons are removed.
+*/
+
+/* Same as above for Webkit browsers: Remove the external spin button */
 input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  -webkit-appearance: none; /* Similarly, disable the external spin button of the number input box */
+  margin: 0; /* Remove the default padding or margin */
 }
+
+/* 
+  `::-webkit-outer-spin-button` is another pseudo-element for the number input box,
+  it is typically used to control the up and down arrow buttons outside the input box. By disabling it, we ensure a consistent appearance of the number input box across different browsers.
+*/
